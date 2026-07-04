@@ -169,6 +169,36 @@
         video.input_video {
             display: none;
         }
+
+        /* Centered attribution at the bottom */
+        #attribution {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.6);
+            background: rgba(20, 20, 25, 0.6);
+            padding: 8px 16px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            pointer-events: auto;
+            letter-spacing: 0.5px;
+        }
+
+        #attribution a {
+            color: #00d2ff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        #attribution a:hover {
+            color: #ffffff;
+        }
     </style>
 
     <!-- Three.js -->
@@ -207,6 +237,10 @@
     <div id="status">
         <div class="status-dot" id="status-indicator"></div>
         <span id="status-text">Starting camera...</span>
+    </div>
+
+    <div id="attribution">
+        Created by <a href="https://github.com/OmellMwanza" target="_blank" rel="noopener noreferrer">Omell</a>
     </div>
 
     <video class="input_video"></video>
